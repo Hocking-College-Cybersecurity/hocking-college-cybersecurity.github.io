@@ -1,7 +1,7 @@
 title: "Cybersecurity Program - Hocking College"
 description: "Student portfolios and program information — Cybersecurity Program, Hocking College"
 baseurl: ""
-url: "" # set to your Pages URL (e.g., https://hocking-college-cybersecurity.github.io) after you create the site
+url: "https://hocking-college-cybersecurity.github.io" # set to your Pages URL (e.g., https://hocking-college-cybersecurity.github.io) after you create the site
 theme: minima
 plugins:
   - jekyll-feed
