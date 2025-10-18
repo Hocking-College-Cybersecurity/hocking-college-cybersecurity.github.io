@@ -1,0 +1,14 @@
+# Seed example students — aggregator will overwrite this file when it runs.
+- name: "Jane Doe"
+  repo_name: "jane-doe-portfolio"
+  url: "https://github.com/hocking-college-cybersecurity/jane-doe-portfolio"
+  title: "Student — Class of 2026"
+  bio: "Jane is focused on incident response and malware analysis. Highlights: memory forensics project."
+  avatar_url: "https://avatars.githubusercontent.com/u/000000?v=4"
+
+- name: "John Smith"
+  repo_name: "john-smith-portfolio"
+  url: "https://github.com/hocking-college-cybersecurity/john-smith-portfolio"
+  title: "Student — Class of 2025"
+  bio: "John built a vulnerability scanning automation for his capstone."
+  avatar_url: "https://avatars.githubusercontent.com/u/000001?v=4"

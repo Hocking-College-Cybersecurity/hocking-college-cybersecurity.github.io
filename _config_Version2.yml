@@ -1,0 +1,13 @@
+title: "Cybersecurity Program - Hocking College"
+description: "Student portfolios and program information — Cybersecurity Program, Hocking College"
+baseurl: ""
+url: "" # set to your Pages URL (e.g., https://hocking-college-cybersecurity.github.io) after you create the site
+theme: minima
+plugins:
+  - jekyll-feed
+
+# Aggregator settings (used by the workflow)
+portfolio_topic: "cyber-portfolio"
+
+# optional logo path (upload logo to assets/ and set this to /assets/logo.png)
+logo: "/assets/logo.png"

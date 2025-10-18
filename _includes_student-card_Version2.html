@@ -1,0 +1,21 @@
+<div class="student-card">
+  <a class="student-link" href="{{ include.student.url }}" target="_blank" rel="noopener">
+    <div class="student-meta">
+      {% if include.student.avatar_url %}
+        <img class="student-avatar" src="{{ include.student.avatar_url }}" alt="{{ include.student.name }} avatar">
+      {% else %}
+        <div class="student-avatar placeholder" aria-hidden="true"></div>
+      {% endif %}
+      <div class="student-heading">
+        <h4 class="student-name">{{ include.student.name }}</h4>
+        {% if include.student.title %}<p class="student-title">{{ include.student.title }}</p>{% endif %}
+      </div>
+    </div>
+
+    {% if include.student.bio %}
+      <p class="student-bio">{{ include.student.bio | strip_html | truncate: 170 }}</p>
+    {% endif %}
+
+    <p class="student-repo"><small>Repository: {{ include.student.repo_name }}</small></p>
+  </a>
+</div>
