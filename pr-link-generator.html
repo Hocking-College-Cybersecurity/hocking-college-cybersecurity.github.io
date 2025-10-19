@@ -9,10 +9,19 @@
     input { width: 100%; padding: 8px; margin-top: 4px; border-radius: 6px; border: 1px solid #ccc; }
     button { margin-top: 20px; padding: 10px 18px; background: #0f62fe; color: #fff; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; }
     .output { margin-top: 24px; background: #fff; padding: 12px; border-radius: 8px; border: 1px solid #e6e6e6; }
+    .instructions { margin-bottom: 18px; color: #333; font-size: 1em; }
+    .copy-btn { margin-top: 10px; background: #FCA311; color: #fff; border: none; border-radius: 6px; padding: 6px 12px; cursor: pointer; font-weight: bold; }
   </style>
 </head>
 <body>
   <h2>GitHub PR Link Generator</h2>
+  <div class="instructions">
+    <p>
+      Enter your GitHub username, repository name, and the branch you want to merge.<br>
+      This tool will generate a direct link to create a Pull Request from your branch to <strong>main</strong>.<br>
+      <em>Use this when submitting assignments or adding new work to your portfolio.</em>
+    </p>
+  </div>
   <form id="prForm" autocomplete="off">
     <label for="username">GitHub Username:</label>
     <input type="text" id="username" required>
@@ -20,8 +29,11 @@
     <label for="repo">Repository Name:</label>
     <input type="text" id="repo" value="student-portfolio" required>
 
-    <label for="branch">Branch Name:</label>
+    <label for="branch">Your Branch Name:</label>
     <input type="text" id="branch" required>
+
+    <label for="target">Target Branch (default: main):</label>
+    <input type="text" id="target" value="main" required>
 
     <button type="submit">Generate PR Link</button>
   </form>
@@ -33,10 +45,16 @@
       var username = document.getElementById('username').value.trim();
       var repo = document.getElementById('repo').value.trim();
       var branch = document.getElementById('branch').value.trim();
+      var target = document.getElementById('target').value.trim() || 'main';
       if(username && repo && branch) {
-        var link = `https://github.com/${username}/${repo}/compare/main...${branch}?expand=1`;
+        var link = `https://github.com/${username}/${repo}/compare/${target}...${branch}?expand=1`;
         document.getElementById('output').style.display = 'block';
-        document.getElementById('output').innerHTML = `<strong>Direct PR Link:</strong><br><a href="${link}" target="_blank">${link}</a>`;
+        document.getElementById('output').innerHTML = `
+          <strong>Direct PR Link:</strong><br>
+          <a href="${link}" target="_blank">${link}</a>
+          <br>
+          <button class="copy-btn" onclick="navigator.clipboard.writeText('${link}')">Copy Link</button>
+        `;
       }
     };
   </script>
