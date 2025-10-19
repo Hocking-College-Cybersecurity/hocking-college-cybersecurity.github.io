@@ -23,7 +23,50 @@ body{margin:0;color:#0f1724;background:#f7fafc;line-height:1.5}
 .highlights-list{display:flex;gap:12px;flex-wrap:wrap;list-style:none;padding:0;margin:10px 0}
 .highlights-list li{background:#fff;padding:10px 12px;border-radius:8px;border:1px solid var(--border)}
 .portfolios{margin-top:18px}
-.student-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px;margin-top:12px}
+.hero-section {
+  background: #1a2332;
+  color: #fff;
+  padding: 2em 1em;
+  text-align: center;
+  border-radius: 8px;
+  margin-bottom: 2em;
+}
+.hero-section .lead {
+  font-size: 1.2em;
+  margin: 1em 0;
+}
+.primary-btn {
+  background: #0078d4;
+  color: #fff;
+  padding: 0.75em 1.5em;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+.primary-btn:hover {
+  background: #005fa3;
+}
+.section-divider {
+  border: none;
+  border-top: 2px solid #e0e0e0;
+  margin: 2em 0;
+}
+.highlights-section {
+  background: #f7f9fc;
+  padding: 1.5em;
+  border-radius: 8px;
+  margin-bottom: 2em;
+}
+.highlights-section ul {
+  list-style: disc inside;
+  margin: 1em 0 0 0;
+  padding: 0;
+}
+.portfolios-section {
+  margin-bottom: 2em;
+}
+.student-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5em;margin-top:1em}
 .student-card{background:var(--card-bg);border:1px solid var(--border);border-radius:12px;padding:14px;transition:transform .12s,box-shadow .12s}
 .student-card:hover{transform:translateY(-4px);box-shadow:0 8px 24px rgba(12,20,55,0.08)}
 .student-link{text-decoration:none;color:inherit;display:block}
