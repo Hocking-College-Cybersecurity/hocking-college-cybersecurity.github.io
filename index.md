@@ -32,13 +32,9 @@ permalink: /
     Click any card to open the student's portfolio (public GitHub repos only).
   </p>
   <div class="student-grid">
-    {% if site.data.students and site.data.students.size > 0 %}
-      {% for student in site.data.students %}
-        {% include student-card.html student=student %}
-      {% endfor %}
-    {% else %}
-      <p>No portfolios found yet. Students should add the repository topic <code>cyber-portfolio</code> to their portfolio repo.</p>
-    {% endif %}
+    {% for student in site.data.students %}
+      {% include student-card.html student=student %}
+    {% endfor %}
   </div>
 </div>
 
