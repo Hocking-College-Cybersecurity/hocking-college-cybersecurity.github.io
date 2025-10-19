@@ -9,22 +9,13 @@
   <link rel="icon" type="image/svg+xml" href="{{ '/assets/favicon.svg' | relative_url }}">
 </head>
 <body>
-  <header class="site-header">
-    <div class="wrap">
-      <div class="brand">
-        <a class="site-title" href="{{ '/' | relative_url }}">
-          {% if site.logo %}
-            <img src="{{ site.logo | relative_url }}" alt="{{ site.title }} logo" class="logo">
-          {% endif %}
-          <span>{{ site.title }}</span>
-        </a>
-      </div>
-      <nav class="site-nav" aria-label="Main navigation">
-        <a href="{{ '/' | relative_url }}">Home</a>
-        <a href="#portfolios">Portfolios</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
+  <header style="display: flex; align-items: center; background: #1a2332; padding: 1em 2em;">
+    <img src="/assets/logo.png" alt="Hocking College Logo" class="site-logo">
+    <nav style="margin-left: auto;">
+      <a href="/">Home</a>
+      <a href="#portfolios">Portfolios</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
   <main class="wrap site-main">

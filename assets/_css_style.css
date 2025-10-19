@@ -16,11 +16,11 @@ body{margin:0;color:#0f1724;background:#f7fafc;line-height:1.5;font-family:'Sego
 .site-title{display:flex;align-items:center;gap:10px;font-weight:600;color:var(--accent);text-decoration:none}
 .logo{height:40px;width:auto;border-radius:6px}
 .site-logo {
-  height: 60px;      /* Set a reasonable height */
+  height: 40px;    /* Standard icon size */
   width: auto;
-  max-width: 200px;  /* Prevents it from being too wide */
+  max-width: 40px;
+  margin-right: 1em;
   display: block;
-  margin: 0 auto 1em auto; /* Center and add space below */
 }
 .homepage-logo {
   height: 80px; /* or whatever size you prefer */
