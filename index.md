@@ -4,8 +4,6 @@ title: "Cybersecurity Program — Hocking College"
 permalink: /
 ---
 
-<img src="/assets/logo.png" alt="Hocking College Logo" class="site-logo homepage-logo">
-
 <div class="hero-section">
   <h1>Cybersecurity Program</h1>
   <h2>Hocking College</h2>
