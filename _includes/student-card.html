@@ -1,13 +1,13 @@
 <!-- Example usage in _includes/student-card.html -->
 <div class="student-card">
-  <h3>Jane Doe</h3>
-  <p>Specialization: Network Security</p>
-  <a href="https://github.com/janedoe/cyber-portfolio" target="_blank" class="portfolio-link">View Portfolio</a>
+  <h3>{{ student.name }}</h3>
+  <p>{{ student.specialization }}</p>
+  <a href="{{ student.portfolio_url }}" target="_blank" class="portfolio-link">View Portfolio</a>
 </div>
 
 <div class="student-card">
-  <h3>John Smith</h3>
-  <p>Specialization: Ethical Hacking</p>
-  <a href="https://github.com/johnsmith/cyber-portfolio" target="_blank" class="portfolio-link">View Portfolio</a>
+  <h3>{{ student.name }}</h3>
+  <p>{{ student.specialization }}</p>
+  <a href="{{ student.portfolio_url }}" target="_blank" class="portfolio-link">View Portfolio</a>
 </div>
 
