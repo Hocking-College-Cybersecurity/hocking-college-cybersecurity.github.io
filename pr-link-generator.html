@@ -77,31 +77,6 @@
     button[type="submit"]:hover {
       background: linear-gradient(90deg, #0084c9 60%, #0f62fe 100%);
     }
-    .output {
-      margin-top: 2em;
-      background: #f4f6fa;
-      padding: 1.2em;
-      border-radius: 10px;
-      border: 1px solid #e6e6e6;
-      text-align: center;
-      font-size: 1.08em;
-      word-break: break-all;
-    }
-    .copy-btn {
-      margin-top: 1em;
-      background: #FCA311;
-      color: #fff;
-      border: none;
-      border-radius: 6px;
-      padding: 8px 18px;
-      cursor: pointer;
-      font-weight: bold;
-      font-size: 1em;
-      transition: background 0.2s;
-    }
-    .copy-btn:hover {
-      background: #0084C9;
-    }
     @media (max-width: 600px) {
       .container {
         padding: 1.2em 0.5em 1.5em 0.5em;
@@ -114,29 +89,10 @@
     <h2>Update Your Portfolio</h2>
     <div class="instructions">
       <p>
-        Fill out the form below to generate a direct link for submitting a Pull Request.<br>
-        <span style="color:#6b7280;">Use this to submit your assignment or add new work to your portfolio repository.</span>
+        Submit your CyberPlaybook entry or final project using the form below.<br>
+        <span style="color:#6b7280;">Paste the link to your GitHub project for your assignment or portfolio update.</span>
       </p>
     </div>
-    <form id="prForm" autocomplete="off">
-      <label for="username">Your GitHub Username</label>
-      <input type="text" id="username" placeholder="e.g. janedoe123" required>
-
-      <label for="repo">Repository Name (usually <b>student-portfolio</b>)</label>
-      <input type="text" id="repo" value="student-portfolio" required>
-
-      <label for="branch">Name of the branch you created for your work<br>
-        <span style="color:#6b7280; font-size:0.97em;">(For example: <b>add-cyb101-project</b>)</span>
-      </label>
-      <input type="text" id="branch" placeholder="e.g. add-cyb101-project" required>
-
-      <label for="target">Target Branch (usually <b>main</b>)</label>
-      <input type="text" id="target" value="main" required>
-
-      <button type="submit">Generate Pull Request Link</button>
-    </form>
-    <div class="output" id="output" style="display:none;"></div>
-
     <form action="submit-entry.php" method="post">
       <fieldset>
         <legend>Submit Your CyberPlaybook or Final Project</legend>
@@ -179,24 +135,5 @@
       </fieldset>
     </form>
   </div>
-  <script>
-    document.getElementById('prForm').onsubmit = function(e) {
-      e.preventDefault();
-      var username = document.getElementById('username').value.trim();
-      var repo = document.getElementById('repo').value.trim();
-      var branch = document.getElementById('branch').value.trim();
-      var target = document.getElementById('target').value.trim() || 'main';
-      if(username && repo && branch) {
-        var link = `https://github.com/${username}/${repo}/compare/${target}...${branch}?expand=1`;
-        document.getElementById('output').style.display = 'block';
-        document.getElementById('output').innerHTML = `
-          <strong>Direct Pull Request Link:</strong><br>
-          <a href="${link}" target="_blank">${link}</a>
-          <br>
-          <button class="copy-btn" onclick="navigator.clipboard.writeText('${link}')">Copy Link</button>
-        `;
-      }
-    };
-  </script>
 </body>
 </html>
