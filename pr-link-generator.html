@@ -139,9 +139,9 @@
 
     <form action="submit-entry.php" method="post">
       <fieldset>
-        <legend>Submit Your Entry</legend>
+        <legend>Submit Your CyberPlaybook or Final Project</legend>
 
-        <label for="course">Select Course:</label>
+        <label for="course">Select Your Course:</label>
         <select id="course" name="course" required>
           <option value="">--Choose a course--</option>
           <option value="net-2220-server-management-autumn-2025">NET-2220 Server Management Autumn 2025</option>
@@ -163,7 +163,7 @@
         </select>
         <br><br>
 
-        <label for="entryType">Entry Type:</label>
+        <label for="entryType">What are you submitting?</label>
         <select id="entryType" name="entryType" required>
           <option value="">--Choose entry type--</option>
           <option value="cyberplaybook">CyberPlaybook Entry</option>
@@ -171,8 +171,8 @@
         </select>
         <br><br>
 
-        <label for="githubUrl">GitHub Repository URL:</label>
-        <input type="url" id="githubUrl" name="githubUrl" required placeholder="https://github.com/username/repo">
+        <label for="githubUrl">Paste the link to your GitHub project:</label>
+        <input type="url" id="githubUrl" name="githubUrl" required placeholder="https://github.com/yourusername/yourproject">
         <br><br>
 
         <button type="submit">Submit</button>
