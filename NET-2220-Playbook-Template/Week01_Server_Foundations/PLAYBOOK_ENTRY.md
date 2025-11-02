@@ -1,9 +1,9 @@
-# Playbook Entry — Week 01: Server Foundations & Virtualization
+# Playbook Entry â€” Week 01: Server Foundations & Virtualization
 
-**Student:** Lastname, Firstname  
-**GitHub username:** username  
+**Student:** Brylan, Williamson 
+**GitHub username:** BrylanW  
 **Week:** 01  
-**Date submitted:** YYYY-MM-DD
+**Date submitted:** 2025-10-27
 
 ## Task / Purpose
 (Example: Set up baseline on-prem server artifacts and compare to cloud VM.)
